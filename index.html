@@ -1,59 +1,81 @@
 <!DOCTYPE html>
-<html lang="nl">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDND Visitekaartje</title>
     <link rel="stylesheet" href="styles/style.css">
-  </head>
-  <body>
-    
-    <article>
-      
-      <header>
-        
-        <h1>Nawal Arkoubi</h1>
-        
-        <p><em>Frontend Developer</em></p>
-        
-        <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
-      </header>
-  
-      <img src="assets/Image.jpeg" alt="" width="800" height="800">
-
-      <dl>
-        <dt>HTML</dt>
-        <dd>🏆🏆🏆</dd>
-        
-        <dt>CSS</dt>
-        <dd>🏆🏆</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>🏆🏆🏆🏆</dd>
-      </dl>
-  
-      <p>Het WEB is te gek! <br> Met HTML, CSS en JS kan ik vette, interactieve web apps maken.</p>
-      
-    </article>
-
-    <script src="scripts/script.js"></script>
-    
-  </body>
+</head>
+<body>
+    <div class="card" data-state="#about">
+       <div class="card-header">
+        <div class="card-cover" style="background-image: url(assets/boom.png);"></div>
+         <img src="assets/Image.jpeg" alt="Avatar" class="card-avatar">
+          <h1 class="card-fullname">Nawal Arkoubi</h1>
+           <h2 class="card-jobtitle">Front-end Developer</h2>
+       </div>
+       <div class="card-main">
+          <div class="card-section is-active" id="about">
+               <div class="card-content">
+                   <div class="card-subtitle">ABOUT ME</div>
+                    <p class="card-desc"> Hii iedereen, ik ben Nawal Arkoubi, 20 jaar en ik heb een passie voor reizen en avontuur. Als ik geen nieuwe plekken ontdek, vind je me voetballend of dansend onderweg. Het leven is een reis en ik ben er helemaal klaar voor!"</p>
+               </div>
+               <div class="card-social">
+                   <a href="#"><img src="assets/fb.png"></a>
+                   <a href="#"><img src="assets/insta.png"></a>
+                   <a href="#"><img src="assets/twitter.png" alt="Insta"></a>
+                   <a href="#"><img src="assets/linkedin.png" alt="Linkedin"></a>
+               </div>
+           </div>
+           <div class="card-section" id="experience">
+               <div class="card-content">
+                   <div class="card-subtitle">WORK EXPERIENCE</div>
+                   <div class="card-timeline">
+                       <div class="card-item" data-year="2019">
+                           <div class="card-item-title">Pikanto Chicken en Burgers<span></span></div>
+                           <div class="card-item-desc">All-round medewerker</div>
+                       </div>
+                    <div class="card-item" data-year="2021">
+                        <div class="card-item-title">Freshly Chopped Markthal <span></span></div>
+                        <div class="card-item-desc">Chopper</div>
+                    </div>
+                    <div class="card-item" data-year="2022">
+                        <div class="card-item-title">Relay rotterdam Centraal<span></span></div>
+                        <div class="card-item-desc">Sales-verkoopmedewerker</div>
+                    </div>
+                    <div class="card-item" data-year="2024">
+                        <div class="card-item-title">Stichting Campus Nederland<span></span></div>
+                        <div class="card-item-desc">Mentor</div>
+                    </div>
+                   </div>
+               </div>
+           </div>
+           <div class="card-section" id="contact">
+               <div class="card-content">
+                   <div class="card-subtitle">Contact</div>
+                   <div class="card-contact-wrapper">
+                       <div class="card-contact">
+                           <img src="assets/phone.png" alt="Location">
+                           +31648071883
+                       </div>
+                    <div class="card-contact">
+                        <img src="assets/mail.png" alt="Phone">
+                        N.arkoubi@outlook.com
+                    </div>
+                    <div class="card-contact">
+                        <img src="assets/location.png" alt="Email">
+                        Gerststraat 27 3081 XA, Rotterdam
+                    </div> 
+                   </div>
+               </div>
+           </div>
+           <div class="card-buttons">
+               <button class="is-active" data-section="#about">ABOUT</button>
+               <button  data-section="#experience">EXPERIENCE</button>
+               <button  data-section="#contact">CONTACT</button>
+           </div>
+       </div>
+    </div>
+<script src="scripts/script.js"></script>    
+</body>
 </html>
